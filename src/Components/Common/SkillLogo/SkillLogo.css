@@ -1,0 +1,30 @@
+.mySwiper .swiper-wrapper {
+  transition-timing-function: linear!important;
+}
+.mySwiper .swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
+.mySwiper .swiper-wrapper img{
+
+
+
+  width: 60px;
+  max-width: 80px;
+}
+
+.figma{
+  width: 40px!important;
+}
+.shopify{
+  width: 60px!important;
+}
+.bootstrap{
+  width: 60px!important;
+}
+.css{
+width:70px!important;
+}
+.canva{
+width: 80px!important;
+}

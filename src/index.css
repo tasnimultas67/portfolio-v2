@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: graphik;
+  src: url(../public/Graphik-Regular-Trial.otf);
+}
+@media screen and (min-width: 1024px) {
+  #bmc-iframe {
+    height: 560px !important;
+    min-height: 500px !important;
+  }
+}
+.fb_reset iframe{
+  bottom: 93px !important;
+  right: 10px !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body{
+  background-color: white!important;
+}
+/* body {
+  overflow-x: scroll;
+} */
+#bmc-wbtn svg path{
+  fill: black;
+}
+
+.img-shadow {
+  box-shadow: 0 100px 80px rgba(0, 0, 0, .07), 0 65px 47px rgba(0, 0, 0, .05), 0 38px 25px rgba(0, 0, 0, .04), 0 20px 13px rgba(0, 0, 0, .04), 6px 6px 6px rgba(0, 0, 0, .03), 1px 1px 3px rgba(0, 0, 0, .02);
+}
+:root {
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  --myThemeColor: #ffff00;
+}
+
+.bg-styled{
+background:
+    repeating-linear-gradient(30deg, #fff2 0 10%, #fff0 0 24%),
+    repeating-linear-gradient(-23deg, #fff2 0 4%, #fff0 0 14%) yellow;
+}
+
+.bg-deepBlue{
+      background: radial-gradient(circle, #0C1221 0%, #000212 100%);
+}

@@ -1,0 +1,4 @@
+.gradient-bg {
+    background-image: radial-gradient(circle closest-corner at 180%, #4353ff, rgba(255, 255, 255, 0)), radial-gradient(circle farthest-side at 190% -130%, #7056f5, transparent)!important;
+    padding-top: 160px!important;
+}

@@ -33,7 +33,7 @@ export default function About() {
 
     
     return (
-        <div className=" md:py-40  py-28 bg-white">
+        <div className=" md:py-36  py-28 bg-white">
             <div className="w-11/12 m-auto text-center sm:text-left">
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -82,16 +82,6 @@ export default function About() {
                             loading='lazy'
                             className="w-full md:w-11/12 m-auto md:m-0 md:float-right float-none rounded-xl shadow-xl lg:-ml-0  "
                         />
-                        {/* <div className="relative grid h-[40rem] w-full sm:w-[38rem] md:w-[38rem] lg:w-[40rem] xl:w-[40rem] flex-col items-end overflow-hidden rounded-xl bg-white bg-clip-border ">
-                            <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://i.ibb.co/xqzMcfq/Tasnimul-Haque.jpg')] bg-cover bg-clip-border bg-center">
-                                <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10"></div>
-                            </div>
-                            <div className="relative p-1 px-6 py-3">
-                                <h2 className="mb-2 text-4xl font-semibold text-white antialiased">
-                                Tasnimul Haque
-                                </h2>
-                            </div>
-                        </div> */}
                             
                     </div>
                 </div>

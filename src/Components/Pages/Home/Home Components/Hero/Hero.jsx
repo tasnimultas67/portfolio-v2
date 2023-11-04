@@ -81,7 +81,7 @@ export default function Hero() {
                     }}
                     viewport={{ once: true }}
                     className=" block md:flex justify-center items-center gap-5">
-                        <Link to="/contact" className='text-base 2xl:text-xl m-auto md:m-0 w-fit flex items-center justify-center bg-white text-black py-3 px-5 rounded-md font-bold hover:bg-yellowAc mb-5 md:mb-0'>Start Project <MinusIcon className=' w-5 mx-1'></MinusIcon>Contact</Link>
+                        <Link to="/portfolio" className='text-base 2xl:text-xl m-auto md:m-0 w-fit flex items-center justify-center bg-white text-black py-3 px-5 rounded-md font-semibold hover:bg-yellowAc mb-5 md:mb-0'>See my Projects <ArrowRightIcon className="h-5 w-5 text-black ml-2 group-hover:-mr-2 group-hover:ml-3"/> </Link>
 
                         <button
                             onClick={getQuote} className="w-fit group font-semibold flex items-center justify-center leading-6 text-yellowAc m-auto md:m-0 2xl:text-xl">

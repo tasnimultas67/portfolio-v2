@@ -38,9 +38,9 @@ const Process = () => {
                             viewport={{once:true}}
                             className='relative overflow-hidden h-[20rem] md:h-[25rem] w-full xl:h-[35rem] 2xl:h-[45rem] rounded-xl bg-white bg-clip-border group/p1'>
                                 <img alt="Portfolio Cover Image" src={discoveryImg} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
-                                <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/30 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end group-hover/p1:backdrop-blur-sm">
-                                    <div className="p-4 sm:p-6 flex-col flex gap-5">
-                                    <h3 className=" text-5xl font-bold text-white flex items-center">Discovery <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
+                                <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/30 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end group-hover/p1:backdrop-blur-sm ">
+                                    <div className="p-4 sm:p-6 flex-col flex gap-5 text-center md:text-left">
+                                        <h3 className="text-4xl md:text-5xl justify-center md:justify-start font-bold text-white flex items-center ">Discovery <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
                                     
                                         <p className='text-gray-100 2xl:text-xl z-50'>This is the phase where I dive deep into your world and get to know you. Before I can properly design your high-performing website, I need to understand you, your pain-points, and your audience.</p>
                                     </div>
@@ -56,8 +56,8 @@ const Process = () => {
                             className='relative overflow-hidden h-[20rem] md:h-[25rem] w-full xl:h-[20rem] 2xl:h-[30rem] rounded-xl bg-white bg-clip-border group/p2'>
                             <img alt="Portfolio Cover Image" src={designImg} className="absolute inset-0 h-full w-full object-cover group-hover/p2:scale-125 duration-300 ease-in-out" loading="lazy" />
                             <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/30 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end group-hover/p2:backdrop-blur-sm">
-                                <div className="p-4 sm:p-6 flex-col flex gap-5">
-                                    <h3 className=" text-5xl font-bold text-white flex items-center">Design <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
+                                <div className="p-4 sm:p-6 flex-col flex gap-5 text-center md:text-left">
+                                    <h3 className="text-4xl md:text-5xl justify-center md:justify-start font-bold text-white flex items-center ">Design <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
                                     <p className='text-gray-100 2xl:text-xl '>I take what I’ve learned about you & craft a bespoke website that’s tailored to meet your unique needs, all while accurately representing your brand & keeping things aesthetically pleasing & useable for your audience.</p>
                                 </div>
                             </div>
@@ -76,8 +76,8 @@ const Process = () => {
                             className='relative overflow-hidden h-[20rem] md:h-[25rem] w-full xl:h-[20rem] 2xl:h-[30rem] rounded-xl bg-white bg-clip-border group/p3'>
                             <img alt="Portfolio Cover Image" src={buildImg} className="absolute inset-0 h-full w-full object-cover group-hover/p3:scale-125 duration-300 ease-in-out" loading="lazy" />
                             <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/30 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end group-hover/p3:backdrop-blur-sm">
-                                <div className="p-4 sm:p-6 flex-col flex gap-5">
-                                    <h3 className=" text-5xl font-bold text-white flex items-center">Build <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
+                                <div className="p-4 sm:p-6 flex-col flex gap-5 text-center md:text-left">
+                                    <h3 className="text-4xl md:text-5xl justify-center md:justify-start font-bold text-white flex items-center">Build <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
                                     <p className='text-gray-100 2xl:text-xl '>Once you’re happy with the designs, I will proceed to building them making sure everything is optimised to follow modern web practices, such as speed, security and reliability.</p>
                                 </div>
                             </div>
@@ -93,8 +93,8 @@ const Process = () => {
                             className='relative overflow-hidden h-[20rem] md:h-[25rem] w-full xl:h-[35rem] 2xl:h-[45rem] rounded-xl bg-white bg-clip-border group/p4'>
                             <img alt="Portfolio Cover Image" src={launchImg} className="absolute inset-0 h-full w-full object-cover group-hover/p4:scale-125 duration-300 ease-in-out" loading="lazy" />
                             <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/30 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end group-hover/p4:backdrop-blur-sm">
-                                <div className="p-4 sm:p-6 flex-col flex gap-5">
-                                    <h3 className=" text-5xl font-bold text-white flex items-center">launch <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
+                                <div className="p-4 sm:p-6 flex-col flex gap-5 text-center md:text-left">
+                                    <h3 className="text-4xl md:text-5xl justify-center md:justify-start font-bold text-white flex items-center">launch <ArrowUpRightIcon className='h-10 w-10 ml-2'></ArrowUpRightIcon></h3>
                                     <p className='text-gray-100 2xl:text-xl '>After I’ve completed the build and double checked everything alongside your approval, it’s time to launch your website. In this phase I will also provide some training videos on how you can add content to your website so you can do it yourself.</p>
                                 </div>
                             </div>

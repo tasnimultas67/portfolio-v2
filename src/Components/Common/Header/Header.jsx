@@ -88,7 +88,7 @@ const Header = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end relative">
-            <a href='../../../../public/Tasnimul Haque Resume.pdf' className="flex items-center text-[0.7rem] 2xl:text-base relative leading-6 text-black uppercase bg-white px-5 2xl:px-8 2xl:py-2  py-1 group group-* w-fit rounded" download>
+            <a href='Tasnimul Haque Resume.pdf' className="flex items-center text-[0.7rem] 2xl:text-base relative leading-6 text-black uppercase bg-white px-5 2xl:px-8 2xl:py-2  py-1 group group-* w-fit rounded" download>
               Resume <span aria-hidden="true"><ArrowUpRightIcon className="h-5 w-5 2xl:h-6 2xl:w-6 relative text-black ml-1 group-hover:-mt-2 group-hover:-mr-2 group-hover:ml-3"/></span>
               </a>
               {
@@ -192,7 +192,7 @@ const Header = () => {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href='Tasnimul Haque Resume.pdf'
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-themeColor"
                   >
                     Resume

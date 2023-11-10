@@ -24,9 +24,7 @@ const Header = () => {
   const [navBg, setNavBg] = useState(false);
   const [isHidden, setIsHidden] = useState(false)
 
-  const location = useLocation()
-  const isContactPage = location.pathname === '/contact';
-  const classAbsolute = isContactPage ? '' : 'absolute';
+
     const changeNavBg = () => {
         window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
     }
@@ -52,8 +50,8 @@ const Header = () => {
   return (
       <>
       {!isHidden && <TopBanner handleClickHidden={handleClickHidden}></TopBanner>}
-      <div className="sticky top-0 z-[1000] bg-white" onScroll={changeNavBg}>
-      <header className={`${classAbsolute} inset-x-0 top-0 z-50 `}>
+        <div className={`sticky top-0 z-[1000] bg-white`} onScroll={changeNavBg}>
+      <header className={`absolute inset-x-0 top-0 z-50 `}>
         <nav className={`flex items-center justify-between px-6 py-3 lg:px-8 ${navBg ? 'backdrop-blur bg-black/20' : 'bg-themeColor'}`} aria-label="Global">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
@@ -203,8 +201,8 @@ const Header = () => {
           </Dialog.Panel>
         </Dialog>
           
-            </header>
-            </div>
+      </header>
+       </div>
 
       </>
         

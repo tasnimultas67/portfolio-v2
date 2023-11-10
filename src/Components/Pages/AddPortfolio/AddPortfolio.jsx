@@ -1,8 +1,10 @@
-import React from 'react';
-
+import { useMemo, useRef, useState } from 'react';
+import JoditEditor from 'jodit-react';
 
 
 const AddPortfolio = () => {
+  const editor = useRef(null);
+	const [pfContent, setPfContent] = useState('');
 
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -13,8 +15,8 @@ const AddPortfolio = () => {
         const portfolioDetails = form.portfolioDetails.value;
         const portfolioLiveLink = form.portfolioLiveLink.value
 
-        const portInfo = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink }
-        console.log(portInfo);
+      const portInfo = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
+      console.log(portInfo)
 
         // Send data to the server
         fetch('https://portfoliobackendserver-tasnimul.up.railway.app/portfolio', {
@@ -67,7 +69,7 @@ const AddPortfolio = () => {
               </div>
             </div>
 
-                        {/* Portfolio Category */}
+            {/* Portfolio Category */}
             <div>
               <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
                 Portfolio Category
@@ -99,23 +101,35 @@ const AddPortfolio = () => {
               </div>
                         </div>
                         
-            {/* Portfolio Details */}
+            {/* Portfolio short Details */}
             <div>
               <div className="flex items-center justify-between">
                 <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                  Portfolio Details
+                  Portfolio Short Description
                 </label>
               </div>
               <div className="mt-2">
                 <textarea
                 name="portfolioDetails"
                 id="portfolioDetails"
-                rows={4}
+                rows={3}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
               </div>
-                        </div>
+              </div>
+              {/* Portfolio Details */}
+              <div>
+                <JoditEditor
+                  ref={editor}
+                  value={pfContent}
+                  tabIndex={1} // tabIndex of textarea
+                  onBlur={newContent => setPfContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                  // onChange={newContent => { }}
+                >
+
+                </JoditEditor>
+              </div>
                         
                         {/* Portfolio Live SIte Link */}
             <div>

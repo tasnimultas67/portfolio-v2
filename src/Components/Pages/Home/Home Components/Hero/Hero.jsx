@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { ArrowRightIcon, MinusIcon, ArrowLongRightIcon } from '@heroicons/react/24/solid';
-import {motion} from 'framer-motion'
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion'
+import HeroTas from '../../../../../assets/Untitled design.jpg'
 
 import './Hero.css'
 import { Link } from 'react-router-dom';
@@ -48,7 +49,7 @@ export default function Hero() {
     }
 
     return (
-        <div className="bg-themeColor text-white h-[100vh] flex items-center">
+        <div className="bg-themeColor text-white h-[100vh] flex items-center overflow-hidden">
 
             <div className="mx-auto w-full md:w-10/12 lg:w-10/12 xl:w-10/12 px-5 py-32 sm:py-36 lg:py-36 ">
 

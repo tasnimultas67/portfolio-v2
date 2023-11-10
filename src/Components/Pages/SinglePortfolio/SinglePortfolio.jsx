@@ -25,7 +25,7 @@ const SinglePortfolio = () => {
                             <img alt="Portfolio Cover Image" src={portfolioImgLink} className="absolute w-full object-cover" loading="lazy" />
                             <div className="relative bg-gradient-to-t from-black/80 to-black/25 pt-32 pb-4 sm:pt-48 sm:pb-5 lg:pt-64 lg:pb-6">
                                 <div className="p-4 sm:p-6">
-                                <p className="block text-sm text-white/90">{ portfolioCategory}</p>
+                                <p className="block text-sm text-white/90 backdrop-blur-lg bg-white/10 w-fit px-2 py-1 rounded-md">{ portfolioCategory}</p>
                                 <h3 className="mt-2 text-5xl font-bold text-white mb-4">{portfolioTitle}</h3>
                                 <Link className="text-white flex items-center w-fit" to={portfolioLiveLink} target="_blank">{portfolioLiveLink} <ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2 text-white"/></Link>
                                 </div>

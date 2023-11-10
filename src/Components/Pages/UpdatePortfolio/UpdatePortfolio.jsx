@@ -1,12 +1,15 @@
-import React from 'react';
+import JoditEditor from 'jodit-react';
+import { useState } from 'react';
+import { useRef } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const UpdatePortfolio = () => {
-    const portfolio = useLoaderData();
-
-    const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink } = portfolio;
-
+  
+  const portfolio = useLoaderData();
+      const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent } = portfolio;
+    const editor = useRef(null);
+	const [updatePfContent, setUpdatePfContent] = useState();
 
 
     const handleUpdatePortfolio = (event) => {
@@ -16,9 +19,11 @@ const UpdatePortfolio = () => {
         const portfolioCategory = form.portfolioCategory.value;
         const portfolioImgLink = form.portfolioImgLink.value;
         const portfolioDetails = form.portfolioDetails.value;
-        const portfolioLiveLink = form.portfolioLiveLink.value
+      const portfolioLiveLink = form.portfolioLiveLink.value
+      const pfContent = updatePfContent
 
-        const updatedPortfolio = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink }
+      const updatedPortfolio = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
+      console.log(updatedPortfolio)
 
         // Send data to the server
         fetch(`https://portfoliobackendserver-tasnimul.up.railway.app/portfolio/${_id}`, {
@@ -108,23 +113,36 @@ const UpdatePortfolio = () => {
               </div>
                         </div>
                         
-            {/* Portfolio Details */}
+            {/* Portfolio Short Description */}
             <div>
               <div className="flex items-center justify-between">
                 <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                  Portfolio Details
+                  Portfolio Short Description
                 </label>
               </div>
               <div className="mt-2">
                 <textarea
                 name="portfolioDetails"
                 id="portfolioDetails"
-                                    rows={4}
+                rows={3}
                 defaultValue={portfolioDetails}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
               </div>
-                        </div>
+              </div>
+              {/* Portfolio Details */}
+              <div>
+                <JoditEditor
+                  
+                  ref={editor}
+                  value={pfContent}
+                  tabIndex={1} // tabIndex of textarea
+                  onBlur={newContent => setUpdatePfContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                  onChange={newContent => { setUpdatePfContent(newContent)}}
+                >
+
+                </JoditEditor>
+              </div>
                         
                         {/* Portfolio Live SIte Link */}
             <div>

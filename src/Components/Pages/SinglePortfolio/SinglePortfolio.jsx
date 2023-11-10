@@ -12,7 +12,7 @@ const SinglePortfolio = () => {
     return (
         <>
             <div className="bg-white py-40">
-                <div className="md:w-9/12 lg:w-9/12 xl:w-9/12 m-auto">
+                <div className="w-11/12 md:w-9/12 lg:w-9/12 xl:w-9/12 m-auto">
                     {/* Portfolio Promotional banner */}
                     <motion.div
                         initial={{ opacity: 0, y: 200 }}
@@ -22,7 +22,7 @@ const SinglePortfolio = () => {
                         }}
                         viewport={{ once: true }}
                         className="relative overflow-hidden rounded-lg shadow">
-                            <img alt="Portfolio Cover Image" src={portfolioImgLink} className="absolute h-full w-full object-cover" loading="lazy" />
+                            <img alt="Portfolio Cover Image" src={portfolioImgLink} className="absolute w-full object-cover" loading="lazy" />
                             <div className="relative bg-gradient-to-t from-black/80 to-black/25 pt-32 pb-4 sm:pt-48 sm:pb-5 lg:pt-64 lg:pb-6">
                                 <div className="p-4 sm:p-6">
                                 <p className="block text-sm text-white/90">{ portfolioCategory}</p>

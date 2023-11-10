@@ -23,7 +23,6 @@ export default function About() {
     
     
   const [age, setAge] = useState(null);
-    const tasnimulImage = "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/375668856_326333556536514_7453168691461338886_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=OBzLZHreO7IAX_kz6iQ&_nc_ht=scontent.fdac14-1.fna&oh=00_AfBfNz-kSYNp_ovzreEJq3CELGbQdnYY_QI-D_2aMrLaYA&oe=6521E779"
 
   useEffect(() => {
       setAge(getAge("2003/12/24"));

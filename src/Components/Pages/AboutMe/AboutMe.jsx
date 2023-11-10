@@ -66,7 +66,8 @@ const AboutMe = () => {
                                 localhost:3000/</motion.p>
                         </div>
                         {/* Image */}
-                        <motion.img
+                        <div className=''>
+                            <motion.img
                             initial={{ opacity: 0, y: 200 }}
                                 whileInView={{opacity: 1, y: 0}}
                                 transition={{
@@ -74,6 +75,8 @@ const AboutMe = () => {
                                 }}
                                     viewport={{ once: true }}
                             className='m-auto  shadow-xl h-80 md:h-[100%]  md:max-h-none w-full object-cover rounded-lg ' loading='lazy' src={tasnimulAboutBanner} alt="Tasnimul Image" srcSet="" />
+                            
+                        </div>
                         {/* Details about me */}
                         <div className=" m-auto md:m-0 text-center sm:text-left md:py-10 py-5 mt-10 text-xl md:w-8/12 2xl:text-[1.7rem] 2xl:leading-10">
                                 <motion.p

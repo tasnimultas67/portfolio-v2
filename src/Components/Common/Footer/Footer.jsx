@@ -97,7 +97,7 @@ const Footer = () => {
                     <div className='md:flex block m-auto justify-between items-center pb-7'>
                     
                         <Link className='buyMeCoffee bg-themeColor' target="_blank" to="https://www.buymeacoffee.com/tasnimulhaque" rel="noreferrer">
-                            <img  className=' bg-themeColor m-auto 2xl:w-[20rem] mb-5 md:mb-0' src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=tasnimulhaque&button_colour=FFFF00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff" />
+                            <img  className=' bg-themeColor m-auto 2xl:w-[20rem] mb-5 md:mb-0' src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=tasnimulhaque&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff" />
                         </Link>
                         <p className='text-gray-200 text-center md:text-start font-normal 2xl:text-xl'>©{copyWriteYear} All Rights Reserved. Designed with 🤍</p>
                     </div>

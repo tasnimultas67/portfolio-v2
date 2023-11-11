@@ -3,12 +3,8 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import {motion} from 'framer-motion'
 
 const SinglePortfolio = () => {
-
-    const Img1 = "https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/381400336_338293568673846_4856061978783159680_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=b5ZjrhrY_U4AX-hM1ce&_nc_ht=scontent.fdac14-1.fna&oh=00_AfDgum8pEK7gSPhuuxOj6ZNqHrp5UW1Fs9TmSbQuh3TdXA&oe=651D7F19"
-
     const portfolio = useLoaderData();
-    const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink } = portfolio;
-
+    const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent } = portfolio;
     return (
         <>
             <div className="bg-white py-40">
@@ -32,7 +28,7 @@ const SinglePortfolio = () => {
                             </div>
                     </motion.div>
                     {/* Portfolio Content */}
-                    <div className="md:w-11/12 lg:w-11/12 xl:w-11/12 m-auto">
+                    {pfContent?.length>0 ? <div dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="md:w-11/12 lg:w-11/12 xl:w-11/12 m-auto">
                         <div className="mt-5 py-4">
                             <h2 className="text-4xl font-extrabold">Focused on web standards and modern web app UX, you’re simply going to build better websites</h2>
                         </div>
@@ -60,7 +56,8 @@ const SinglePortfolio = () => {
                                 viewport={{ once: true }}
                                 className="rounded-lg" src="https://images.unsplash.com/photo-1694801928101-615280ca4e54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Portfolio Image" loading="lazy" />
                         </div>
-                    </div>
+                    </div>}
+                    
 
                     
                     

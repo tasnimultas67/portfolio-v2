@@ -23,7 +23,6 @@ const UpdatePortfolio = () => {
       const pfContent = updatePfContent
 
       const updatedPortfolio = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
-      console.log(updatedPortfolio)
 
         // Send data to the server
         fetch(`https://portfoliobackendserver-tasnimul.up.railway.app/portfolio/${_id}`, {
@@ -35,7 +34,6 @@ const UpdatePortfolio = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',

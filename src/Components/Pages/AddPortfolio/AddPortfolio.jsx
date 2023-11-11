@@ -16,7 +16,7 @@ const AddPortfolio = () => {
         const portfolioLiveLink = form.portfolioLiveLink.value
 
       const portInfo = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
-      console.log(portInfo)
+
 
         // Send data to the server
         fetch('https://portfoliobackendserver-tasnimul.up.railway.app/portfolio', {
@@ -28,7 +28,6 @@ const AddPortfolio = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.insertedId) {
                     alert('Portfolio Added')
                     form.reset()

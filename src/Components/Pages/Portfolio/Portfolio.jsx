@@ -5,7 +5,6 @@ import {motion} from "framer-motion"
 
 const Portfolio = () => {
     const loadedPortfolios = useLoaderData()
-    console.log(loadedPortfolios);
     const [portfolios, setPortfolios] = useState(loadedPortfolios)
 
     return (

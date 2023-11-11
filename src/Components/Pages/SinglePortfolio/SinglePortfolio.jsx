@@ -28,7 +28,7 @@ const SinglePortfolio = () => {
                             </div>
                     </motion.div>
                     {/* Portfolio Content */}
-                    {pfContent?.length>0 ? <div dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="md:w-11/12 lg:w-11/12 xl:w-11/12 m-auto">
+                    {pfContent?.length>0 ? <div className="pt-16" dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="md:w-11/12 lg:w-11/12 xl:w-11/12 m-auto">
                         <div className="mt-5 py-4">
                             <h2 className="text-4xl font-extrabold">Focused on web standards and modern web app UX, you’re simply going to build better websites</h2>
                         </div>

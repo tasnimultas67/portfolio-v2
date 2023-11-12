@@ -49,57 +49,106 @@ const AddPortfolio = () => {
         </div>
 
         <div className="mt-10 w-10/12 m-auto">
-                    <form className="space-y-4" onSubmit={handleFormSubmit}>
-                        
-        
-            {/* Portfolio Title */}
-            <div>
-              <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                Portfolio Title
-              </label>
-              <div className="mt-2">
-                <input
-                  id="portfolioTitle"
-                  name="portfolioTitle"
-                  type="text"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+            <form className="space-y-4" onSubmit={handleFormSubmit}>
+              <div className='flex flex-col lg:flex-row gap-3'>
+                {/* Portfolio Title */}
+                <div className='flex-1'>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Portfolio Title
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioTitle"
+                      name="portfolioTitle"
+                      type="text"
+                      required
+                      placeholder='e.g. Tasnimul Haque'
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                  </div>
+                  {/* Portfolio Live SIte Link */}
+                  <div className='flex-grow'>
+                    <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                      Live Site Link
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="portfolioLiveLink"
+                        name="portfolioLiveLink"
+                        type="text"
+                      required
+                      placeholder='e.g. https://devtasnimul.netlify.app/'
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                    </div>
+                  </div>
+              </div>    
+              <div className='flex flex-col lg:flex-row gap-3'>
+                {/* Portfolio Category */}
+                <div>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Portfolio Category
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioCategory"
+                      name="portfolioCategory"
+                      type="text"
+                      placeholder='e.g. Wordpress'
+                      required
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>  
+                {/* Portfolio Role */}
+                <div>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Portfolio Role
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioRole"
+                      name="portfolioRole"
+                      type="text"
+                      placeholder='e.g. Ecommerce'
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div> 
+                {/* Portfolio Year */}
+                <div>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Portfolio Year
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioYear"
+                      name="portfolioYear"
+                      type="text"
+                      placeholder='e.g. 2021'
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div> 
+                {/* Portfolio Image Link */}
+                <div className='flex-grow'>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Image Link
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioImgLink"
+                      name="portfolioImgLink"
+                      type="text"
+                      placeholder='e.g. www.example.com/img/asdfh'
+                      required
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Portfolio Category */}
-            <div>
-              <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                Portfolio Category
-              </label>
-              <div className="mt-2">
-                <input
-                  id="portfolioCategory"
-                  name="portfolioCategory"
-                  type="text"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-                        </div>
-
-                    {/* Portfolio Image Link */}
-            <div>
-              <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                Image Link
-              </label>
-              <div className="mt-2">
-                <input
-                  id="portfolioImgLink"
-                  name="portfolioImgLink"
-                  type="text"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-                        </div>
-                        
             {/* Portfolio short Details */}
             <div>
               <div className="flex items-center justify-between">
@@ -129,23 +178,6 @@ const AddPortfolio = () => {
 
                 </JoditEditor>
               </div>
-                        
-                        {/* Portfolio Live SIte Link */}
-            <div>
-              <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
-                Live Site Link
-              </label>
-              <div className="mt-2">
-                <input
-                  id="portfolioLiveLink"
-                  name="portfolioLiveLink"
-                  type="text"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-                        </div>
-
             <div>
               <button
                 type="submit"

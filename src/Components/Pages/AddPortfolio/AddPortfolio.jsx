@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import {useRef, useState } from 'react';
 import JoditEditor from 'jodit-react';
 
 
@@ -7,15 +7,18 @@ const AddPortfolio = () => {
 	const [pfContent, setPfContent] = useState('');
 
     const handleFormSubmit = (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const portfolioTitle = form.portfolioTitle.value;
-        const portfolioCategory = form.portfolioCategory.value;
-        const portfolioImgLink = form.portfolioImgLink.value;
-        const portfolioDetails = form.portfolioDetails.value;
-        const portfolioLiveLink = form.portfolioLiveLink.value
+      event.preventDefault()
+      const form = event.target;
+      const portfolioTitle = form.portfolioTitle.value;
+      const portfolioCategory = form.portfolioCategory.value;
+      const portfolioImgLink = form.portfolioImgLink.value;
+      const portfolioDetails = form.portfolioDetails.value;
+      const portfolioLiveLink = form.portfolioLiveLink.value;
+      const portfolioRole = form.portfolioRole.value;
+      const portfolioYear = form.portfolioYear.value;
+      const portfolioCountry = form.portfolioCountry.value;
 
-      const portInfo = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
+      const portInfo = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent, portfolioRole, portfolioYear, portfolioCountry}
 
 
         // Send data to the server
@@ -32,12 +35,8 @@ const AddPortfolio = () => {
                     alert('Portfolio Added')
                     form.reset()
                 }
-
             })
-        
     }
-
-    
     return (
         <>
 
@@ -79,6 +78,21 @@ const AddPortfolio = () => {
                         type="text"
                       required
                       placeholder='e.g. https://devtasnimul.netlify.app/'
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      />
+                    </div>
+                  </div>
+                  {/* Portfolio Country */}
+                  <div>
+                    <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                      Portfolio Country
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="portfolioCountry"
+                        name="portfolioCountry"
+                        type="text"
+                        placeholder='e.g. Bangladesh'
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
                     </div>

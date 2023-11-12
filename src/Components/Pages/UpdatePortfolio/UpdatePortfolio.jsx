@@ -7,22 +7,25 @@ import Swal from 'sweetalert2';
 const UpdatePortfolio = () => {
   
   const portfolio = useLoaderData();
-      const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent } = portfolio;
+      const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent, portfolioRole, portfolioYear, portfolioCountry } = portfolio;
     const editor = useRef(null);
 	const [updatePfContent, setUpdatePfContent] = useState();
 
 
     const handleUpdatePortfolio = (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const portfolioTitle = form.portfolioTitle.value;
-        const portfolioCategory = form.portfolioCategory.value;
-        const portfolioImgLink = form.portfolioImgLink.value;
-        const portfolioDetails = form.portfolioDetails.value;
-      const portfolioLiveLink = form.portfolioLiveLink.value
-      const pfContent = updatePfContent
+      event.preventDefault()
+      const form = event.target;
+      const portfolioTitle = form.portfolioTitle.value;
+      const portfolioCategory = form.portfolioCategory.value;
+      const portfolioImgLink = form.portfolioImgLink.value;
+      const portfolioDetails = form.portfolioDetails.value;
+      const portfolioLiveLink = form.portfolioLiveLink.value;
+      const pfContent = updatePfContent;
+      const portfolioRole = form.portfolioRole.value;
+      const portfolioYear = form.portfolioYear.value;
+      const portfolioCountry = form.portfolioCountry.value;
 
-      const updatedPortfolio = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent }
+      const updatedPortfolio = { portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent, portfolioRole, portfolioYear, portfolioCountry }
 
         // Send data to the server
         fetch(`https://portfoliobackendserver-tasnimul.up.railway.app/portfolio/${_id}`, {
@@ -43,11 +46,8 @@ const UpdatePortfolio = () => {
                      })
                     form.reset()
                 }
-
             })
-        
     }
-
     return (
        <>
 
@@ -93,7 +93,23 @@ const UpdatePortfolio = () => {
                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       />
                     </div>
+                </div>
+                {/* Portfolio Country */}
+                <div>
+                  <label htmlFor="text" className="block text-sm font-medium leading-6 text-gray-900">
+                    Portfolio Country
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="portfolioCountry"
+                      name="portfolioCountry"
+                      type="text"
+                      defaultValue={portfolioCountry}
+                      placeholder='e.g. Ecommerce'
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    />
                   </div>
+                </div>
               </div>  
 
                             <div className='flex flex-col lg:flex-row gap-3'>
@@ -124,6 +140,7 @@ const UpdatePortfolio = () => {
                       id="portfolioRole"
                       name="portfolioRole"
                       type="text"
+                      defaultValue={portfolioRole}
                       placeholder='e.g. Ecommerce'
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
@@ -139,6 +156,7 @@ const UpdatePortfolio = () => {
                       id="portfolioYear"
                       name="portfolioYear"
                       type="text"
+                      defaultValue={portfolioYear}
                       placeholder='e.g. 2021'
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />

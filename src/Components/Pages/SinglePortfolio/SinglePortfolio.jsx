@@ -107,7 +107,7 @@ const SinglePortfolio = () => {
                         </div>
                         {/* portfolio details */}
                         <div className="bg-gray-200 p-6 mt-4 rounded-lg">
-                            {pfContent?.length>0 ? <div className="2xl:text-xl text-base" dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="md:w-11/12 lg:w-11/12 xl:w-11/12 m-auto">
+                            {pfContent?.length>0 ? <div className="2xl:text-xl text-base" dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="">
                                 <div className="mt-5 py-4">
                                     <h2 className="text-4xl font-extrabold">Focused on web standards and modern web app UX, you’re simply going to build better websites</h2>
                                 </div>
@@ -153,9 +153,9 @@ const SinglePortfolio = () => {
                                 <div className="relative bg-gradient-to-t from-black/90 to-black/20 pt-32 pb-3 lg:pt-48 2xl:pt-64">
                                     <div className="p-4 sm:p-6">
                                         <div className="text-base flex-col flex 2xl:text-xl ">
-                                            <p className="text-white">Category: { portfolioRole?.length>0 ? {portfolioRole} : "Agency"}</p>
-                                            <p className="text-white">Country: { portfolioCountry?.length>0 ? {portfolioCountry} : "United States"}</p>
-                                            <p className="text-white">Year: { portfolioYear?.length>0 ? {portfolioYear} : "2023"}</p>
+                                            <p className="text-white">Category: { portfolioRole?.length>0 ? `${portfolioRole}` : "Agency"}</p>
+                                            <p className="text-white">Country: { portfolioCountry?.length>0 ? `${portfolioCountry}` : "United States"}</p>
+                                            <p className="text-white">Year: { portfolioYear?.length>0 ? `${portfolioYear}` : "2023"}</p>
                                         </div>
                                         <p className="mt-4 text-white 2xl:text-xl ">Made with { portfolioCategory}</p>
                                         <h3 className="mt-2 text-5xl font-bold text-white mb-4">{portfolioTitle}</h3>

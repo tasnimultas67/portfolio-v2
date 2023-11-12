@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 
 const SinglePortfolio = () => {
     const portfolio = useLoaderData();
-    const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent } = portfolio;
+    const { _id, portfolioTitle, portfolioCategory, portfolioImgLink, portfolioDetails, portfolioLiveLink, pfContent, portfolioRole, portfolioYear, portfolioCountry } = portfolio;
     return (
         <>
             {/* <div className="bg-white py-40">
@@ -138,6 +138,7 @@ const SinglePortfolio = () => {
                             </div>}
                         </div>
                     </div>
+                    {/* Portfolio Side Bar */}
                     <div >
                         <div className="sticky top-[4.7rem] 2xl:top-[7rem] right-0 hidden lg:block">
                             <motion.div
@@ -152,9 +153,9 @@ const SinglePortfolio = () => {
                                 <div className="relative bg-gradient-to-t from-black/90 to-black/20 pt-32 pb-3 lg:pt-48 2xl:pt-64">
                                     <div className="p-4 sm:p-6">
                                         <div className="text-base flex-col flex 2xl:text-xl ">
-                                            <p className="text-white">Category: Ecommerce</p>
-                                            <p className="text-white">Country: Bangladesh</p>
-                                            <p className="text-white">Year: 2023</p>
+                                            <p className="text-white">Category: { portfolioRole?.length>0 ? {portfolioRole} : "Agency"}</p>
+                                            <p className="text-white">Country: { portfolioCountry?.length>0 ? {portfolioCountry} : "United States"}</p>
+                                            <p className="text-white">Year: { portfolioYear?.length>0 ? {portfolioYear} : "2023"}</p>
                                         </div>
                                         <p className="mt-4 text-white 2xl:text-xl ">Made with { portfolioCategory}</p>
                                         <h3 className="mt-2 text-5xl font-bold text-white mb-4">{portfolioTitle}</h3>

@@ -5,6 +5,8 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import signature from '../../../../../../public/tasnimul-signature.png'
 import './About.css'
 import { motion } from 'framer-motion';
+import arrow2 from '../../../../../assets/arrow2.svg'
+import Marquee from 'react-fast-marquee';
 
 function getAge(dateString) {
     const today = new Date();
@@ -32,7 +34,7 @@ export default function About() {
 
     
     return (
-        <div className=" md:py-36  py-28 bg-white">
+        <div className=" md:pt-36  pt-28 bg-white">
             <div className="w-11/12 m-auto text-center sm:text-left">
                 <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -84,6 +86,10 @@ export default function About() {
                             
                     </div>
                 </div>
+            </div>
+            <div className='mt-20 md:mt-32 '>
+                <Marquee speed={50} gradient={false} pauseOnHover={false} className='bg-themeColor marquee-text font-semibold py-4 text-white mt-10'>
+                    <h2 className='uppercase text-lg md:text-2xl '>WEB DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /> <h2 className='uppercase text-lg md:text-2xl '>WORDPRESS DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /><h2 className='uppercase text-lg md:text-2xl '>SHOPIFY DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2 ' /><h2 className='uppercase text-lg md:text-2xl '>WORDPRESS CUSTOMIZATION</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /> <h2 className='uppercase text-lg md:text-2xl '>shopify CUSTOMIZATION</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /> <h2 className='uppercase text-lg md:text-2xl '>WEB DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /> <h2 className='uppercase text-lg md:text-2xl '>WORDPRESS DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /><h2 className='uppercase text-lg md:text-2xl '>SHOPIFY DEVELOPMENT</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2 ' /><h2 className='uppercase text-lg md:text-2xl '>WORDPRESS CUSTOMIZATION</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /> <h2 className='uppercase text-lg md:text-2xl '>shopify CUSTOMIZATION</h2> <img src={arrow2} alt="" srcSet="" className='w-10 h-10 mx-2' /></Marquee>
             </div>
         </div>
     )

@@ -1,7 +1,6 @@
 import {useRef, useState } from 'react';
 import JoditEditor from 'jodit-react';
 
-
 const AddPortfolio = () => {
   const editor = useRef(null);
 	const [pfContent, setPfContent] = useState('');

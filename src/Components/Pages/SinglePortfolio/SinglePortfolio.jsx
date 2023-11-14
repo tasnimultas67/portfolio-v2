@@ -107,7 +107,7 @@ const SinglePortfolio = () => {
                         </div>
                         {/* portfolio details */}
                         <div className="bg-gray-200 p-6 mt-4 rounded-lg">
-                            {pfContent?.length>0 ? <div className="2xl:text-xl text-base" dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="">
+                            {pfContent?.length > 0 ? <div className="2xl:text-xl text-base" dangerouslySetInnerHTML={{__html: pfContent}}></div> : <div className="">
                                 <div className="mt-5 py-4">
                                     <h2 className="text-4xl font-extrabold">Focused on web standards and modern web app UX, you’re simply going to build better websites</h2>
                                 </div>

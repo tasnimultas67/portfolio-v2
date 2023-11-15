@@ -1,4 +1,3 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
 import './ClientLogo.css'
 import Marquee from 'react-fast-marquee';
 import 'swiper/css';
@@ -14,7 +13,7 @@ export default function ClientLogo() {
             <img className="viveFitness" src="https://i.ibb.co/zVMYvRM/vivefitness.png" alt="Vive Fitness" />
             <img className="whoWillSpeakForYou" src="https://i.ibb.co/sKXqN1z/whowillspeakforyou.png" alt="Who will speak for you" />
             <img className="dorfladen" src="https://i.ibb.co/1GnkKjD/dorfladen.png" alt="Dorfladen" />
-            <img className="dulhan" src="https://i.ibb.co/R06N2dB/dulhan.png" alt="Dulhan" />
+            <img className="dulhan" src="https://i.ibb.co/Wp8zdcp/dulhan.webp" alt="Dulhan" />
             <img className="fusionArts" src="https://i.ibb.co/09p6KZL/fusion-arts.png" alt="Fusion Arts" />
             <img className="greenlife" src="https://i.ibb.co/YQDdJP2/greenlife.webp" alt="GreenLife" />
             <img className="herbsWorld" src="https://i.ibb.co/zbzRRT3/herbsworld.png" alt="Herbs World Limited" />

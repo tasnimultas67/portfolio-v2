@@ -6,10 +6,10 @@ import Marquee from 'react-fast-marquee';
 
 const Process = () => {
 
-    const discoveryImg = "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=1632&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    const designImg = "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    const buildImg = "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=1528&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    const launchImg ="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?auto=format&fit=crop&q=80&w=1472&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    const discoveryImg = "https://i.ibb.co/cJ8bLpp/process1.webp"
+    const designImg = "https://i.ibb.co/0tnQW7S/process2.webp"
+    const buildImg = "https://i.ibb.co/VSxnhbb/process3.webp"
+    const launchImg ="https://i.ibb.co/t2zyCc5/process4.webp"
 
 
     return (

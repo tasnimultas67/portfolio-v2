@@ -1,5 +1,4 @@
 import tasnimulAboutBanner from '../../../assets/TasnimulHaqueAboutBanner.webp'
-import tasnimulImage from '../../../assets/Tasnimul Haque 2.jpg'
 import { useEffect, useState } from "react";
 import { register } from 'swiper/element/bundle';
 import { MapPinIcon } from '@heroicons/react/24/solid'

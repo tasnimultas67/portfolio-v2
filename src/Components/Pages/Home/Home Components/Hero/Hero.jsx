@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion'
-import HeroTas from '../../../../../assets/Untitled design.jpg'
 
 import './Hero.css'
 import { Link } from 'react-router-dom';

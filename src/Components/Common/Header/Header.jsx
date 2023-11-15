@@ -3,13 +3,10 @@ import './Header.css'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../../../../public/tasnimul-haque-logo.png'
-import MyResume from '../../../../public/Tasnimul Haque Resume.pdf';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import TopBanner from '../TopBanner/TopBanner';
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid';
-import Tas from '../../../assets/Tasnimul Haque.jpg'
 import { AuthContext } from '../../Providers/AuthProviders';
-import { motion } from "framer-motion"
 
 const navigation = [
     { name: '<Home/>', href: '/' },
@@ -19,6 +16,8 @@ const navigation = [
 ]
 
 const Header = () => {
+  const Tas = "https://i.ibb.co/sKQBwkc/Tasnimul-Haque.jpg"
+
   const {user, signOutUser} = useContext(AuthContext)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [navBg, setNavBg] = useState(false);

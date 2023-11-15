@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Tasnimul from '../../../../../assets/Tasnimul Haque.jpg'
 import { useEffect, useState } from 'react';
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import signature from '../../../../../../public/tasnimul-signature.png'
@@ -23,7 +22,7 @@ function getAge(dateString) {
 
 export default function About() {
     
-    
+    const Tasnimul = "https://i.ibb.co/sKQBwkc/Tasnimul-Haque.jpg"
   const [age, setAge] = useState(null);
 
   useEffect(() => {

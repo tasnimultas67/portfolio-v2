@@ -47,7 +47,7 @@ export default function ManagePortfolio() {
           <div className=" bg-white py-36">
               
                 <ul role="list" className="divide-y divide-gray-200 w-10/12 m-auto">
-                {portfolios.map((portfolio) => (
+                {portfolios.slice(0).reverse().map((portfolio) => (
                     <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-[#ffff00] px-5 bg-gray-100 my-2 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
                             <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioImgLink} alt="Portfolio Image" loading="lazy" />

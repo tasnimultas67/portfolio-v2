@@ -29,7 +29,7 @@ const Portfolio = () => {
             </div>
             <div className='grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
                 {
-                    portfolios.map(portfolio => <SinglePortfolioCard key={portfolio._id} portfolio={portfolio}/>)
+                    portfolios.slice(0).reverse().map(portfolio => <SinglePortfolioCard key={portfolio._id} portfolio={portfolio}/>)
                 }
             </div>
         </div>

@@ -40,7 +40,7 @@ const Experiences = () => {
                     duration: 0.9,
                 }}
                 viewport={{ once: true }}
-                className='lg:flex gap-5 md:mt-10'>
+                className='grid md:grid-cols-2 grid-cols-1 gap-5 md:mt-10'>
                 {
                 experiences.map(experience => <Experience key={experience._id} experience={experience } />)
                  }

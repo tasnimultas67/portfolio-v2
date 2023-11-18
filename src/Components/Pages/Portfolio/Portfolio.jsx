@@ -28,8 +28,11 @@ const Portfolio = () => {
                     className='md:w-7/12 m-auto text-center mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl 2xl:text-2xl 2xl:w-9/12'>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. - Steve Jobs</motion.p>
             </div>
             <div className='grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
-                {
+                {/* {
                     portfolios.slice(0).reverse().map(portfolio => <SinglePortfolioCard key={portfolio._id} portfolio={portfolio}/>)
+                } */}
+                {
+                    portfolios.map(portfolio => <SinglePortfolioCard key={portfolio._id} portfolio={portfolio}/>)
                 }
             </div>
         </div>

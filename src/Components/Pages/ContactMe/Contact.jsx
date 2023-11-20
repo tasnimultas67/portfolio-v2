@@ -1,6 +1,4 @@
 import { motion } from "framer-motion"
-// import FbMessageUs from "../../Common/Facebook/fbMessageUs";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 export default function Contact() {
 
@@ -76,12 +74,6 @@ export default function Contact() {
                 <button type="submit" className="py-3 px-5 text-sm font-medium text-center text-white bg-themeColor sm:w-fit hover:bg-black focus:ring-4 focus:outline-none focus:ring-themeColor rounded 2xl:text-xl">Send message</button>
             </form>
           </motion.div>
-        </div>
-        <div className="fb-chat-widget">
-          <MessengerCustomerChat
-          pageId={import.meta.env.VITE_FACEBOOK_PAGE_ID}
-          appId={import.meta.env.VITE_FACEBOOK_APP_ID}
-        />
         </div>
       </section>
 

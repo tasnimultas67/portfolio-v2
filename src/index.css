@@ -8,10 +8,8 @@
     min-height: 500px !important;
   }
 }
-.fb_reset iframe{
-  bottom: 93px !important;
-  right: 10px !important;
-}
+
+
 body::-webkit-scrollbar {
   display: none;
 }

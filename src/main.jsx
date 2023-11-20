@@ -19,6 +19,7 @@ import AuthProviders from './Components/Providers/AuthProviders.jsx';
 import PrivateRoutes from './Components/Routes/PrivateRoutes.jsx';
 import SinglePortfolio from './Components/Pages/SinglePortfolio/SinglePortfolio.jsx';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,7 +73,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProviders>
-    <RouterProvider router={router} />
+      <RouterProvider router={router}>
+      </RouterProvider>
     </AuthProviders>
   </React.StrictMode>,
 )

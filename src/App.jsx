@@ -1,11 +1,11 @@
-
-
 import { Outlet, ScrollRestoration, useLocation} from 'react-router-dom'
 import './App.css'
 import Header from './Components/Common/Header/Header'
 import Footer from './Components/Common/Footer/Footer'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 const titleMap = [
     {path: '/', title:'Tasnimul Haque'},
@@ -38,6 +38,10 @@ const [pageTitle, setPageTitle] = useState('Tasnimul Haque');
       }}/>
       <Header></Header>
       <Outlet></Outlet>
+      <MessengerCustomerChat
+          pageId={import.meta.env.VITE_FACEBOOK_PAGE_ID}
+          appId={import.meta.env.VITE_FACEBOOK_APP_ID}
+        />
       <Footer></Footer>
     </>
   )

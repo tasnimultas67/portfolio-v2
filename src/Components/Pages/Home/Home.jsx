@@ -8,6 +8,7 @@ import Skills from './Home Components/Skills/Skills';
 import ClientLogo from '../../Common/ClientLogo/ClientLogo';
 import WhyChoose from './Home Components/WhyChoose/WhyChoose';
 import Process from './Home Components/Process/Process';
+import ContactMeBanner from '../../Common/ContactMeBanner/ContactMeBanner';
 
 
 const Home = () => {
@@ -15,12 +16,12 @@ const Home = () => {
         <div className='home relative top-0 left-0'>
             <Hero></Hero>
             <About></About>
+            <Portfolios />
             <WhyChoose></WhyChoose>
             <Experiences ></Experiences>
             <Process></Process>
             <Skills/>
-            <Portfolios />
-            <div className='py-28 md:py-48'>
+            <div className='pb-24 pt-16 md:pb-32 md:pt-28'>
                 <motion.h1
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{opacity: 1, y: 0}}
@@ -28,7 +29,7 @@ const Home = () => {
                         duration: 0.5,
                     }}
                     viewport={{ once: true }}
-                    className='mb-20 w-11/12  text-3xl md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-bold md:max-w-4xl 2xl:max-w-6xl m-auto text-black tracking-tight leading-none text-center'>Trusted by thousands of successful startups worldwide</motion.h1>
+                    className='mb-20 w-11/12  text-3xl md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-bold md:max-w-4xl 2xl:max-w-6xl m-auto text-black tracking-tight leading-none text-center'>Trusted by thousands of successful startups <span className='text-themeColor'>worldwide</span></motion.h1>
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{opacity: 1, y: 0}}
@@ -39,6 +40,7 @@ const Home = () => {
                     <ClientLogo></ClientLogo>
                 </motion.div>
             </div>
+            <ContactMeBanner></ContactMeBanner>
 
         </div>
     );

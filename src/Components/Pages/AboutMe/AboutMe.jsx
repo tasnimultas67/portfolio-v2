@@ -97,14 +97,15 @@ const AboutMe = () => {
                         </div>
                         <div className='md:flex gap-10 flex-row items-center mt-10'>
                             <div className='flex-1 '>
-                                <motion.h1
+                                <motion.img
                                 initial={{ opacity: 0, y: 100 }}
                                     whileInView={{opacity: 1, y: 0}}
                                     transition={{
                                         duration: 0.5,
                                     }}
                                     viewport={{ once: true }}
-                                    className='text-4xl md:text-6xl 2xl:text-8xl text-center md:text-left font-bold text-black mb-7 md:mb-0'>I enjoy partnering with design-savvy experts.</motion.h1>
+                                    src='https://i.ibb.co/bzqyPyh/noodle-2x.webp'
+                                    className='w-9/12 h-auto m-auto mb-10 md:mb-0'/>
                             </div>
                             <div className='flex-1 text-center sm:text-left text-xl 2xl:text-[1.7rem] 2xl:leading-10'>
                                 <motion.p

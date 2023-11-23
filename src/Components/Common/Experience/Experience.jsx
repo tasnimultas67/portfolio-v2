@@ -1,9 +1,7 @@
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
 import { motion } from 'framer-motion'
 
 
 const Experience = ({ experience }) => {
-    const icon = "https://i.ibb.co/8NRgKx2/online-work.png";
     const worksImg = "https://i.ibb.co/CtsJjvW/works.webp"
     const {position, company, startDate, endDate, description} = experience
     return (

@@ -9,10 +9,10 @@ import { ArrowUpRightIcon } from '@heroicons/react/20/solid';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const navigation = [
-    { name: '<Home/>', href: '/' },
-    { name: '<About/>', href: '/about' },
-    { name: '<Portfolio/>', href: '/portfolio' },
-    { name: '<Contact/>', href: '/contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 const Header = () => {
@@ -71,8 +71,10 @@ const Header = () => {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+            </div>
+            {/* Menu with DropDown User */}
+            <div className='hidden lg:flex items-center gap-x-10'>
+                        <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <NavLink
               style={({ isActive, isPending }) => {
@@ -83,7 +85,8 @@ const Header = () => {
                 {item.name}
               </NavLink>
             ))}
-          </div>
+            </div>
+            
           <div className="hidden lg:flex lg:flex-1 lg:justify-end relative">
             <a href='Tasnimul Haque Resume.pdf' className="flex items-center text-[0.7rem] 2xl:text-base relative leading-6 text-black uppercase bg-white px-5 2xl:px-8 2xl:py-2  py-1 group group-* w-fit rounded" download>
               Resume <span aria-hidden="true"><ArrowUpRightIcon className="h-5 w-5 2xl:h-6 2xl:w-6 relative text-black ml-1 group-hover:-mt-2 group-hover:-mr-2 group-hover:ml-3"/></span>
@@ -147,6 +150,9 @@ const Header = () => {
                 </Menu>
             }
           </div>
+              
+            </div>
+
             
         </nav>
         <Dialog as="div" className="lg:hidden " open={mobileMenuOpen} onClose={setMobileMenuOpen}>

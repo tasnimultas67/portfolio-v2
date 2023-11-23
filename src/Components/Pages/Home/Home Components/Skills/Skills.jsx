@@ -13,7 +13,7 @@ const Skills = () => {
             .then(data =>setSkills(data))
     }, [])
     return (
-        <div className='w-full m-auto px-5 sm:px-7 md:px-10 lg:px-16 xl:px-16 md:pb-36 pb-28 pt-14 relative isolate overflow-hidden bg-white'>
+        <div className='w-full m-auto px-5 sm:px-7 md:px-10 lg:px-16 xl:px-16 md:pb-30 pb-20 pt-14 relative isolate overflow-hidden bg-white'>
             <div className=' pb-10'>
 
                 <motion.h1

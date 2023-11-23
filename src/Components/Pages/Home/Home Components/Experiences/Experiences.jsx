@@ -14,7 +14,7 @@ const Experiences = () => {
     }, [])
 
     return (
-        <div className=' m-auto w-11/12 py-28 md:py-36 bg-white text-center sm:text-left'>
+        <div className=' m-auto w-11/12 py-32 md:py-40 bg-white text-center sm:text-left'>
             <div>
                 <motion.h1
                     initial={{ opacity: 0, y: 100 }}

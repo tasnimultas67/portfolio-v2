@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <>
       <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 px-4 mx-auto w-11/12">
+        <div className="py-8 lg:py-32 px-4 mx-auto w-11/12">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{opacity: 1, y: 0}}
@@ -42,8 +42,8 @@ export default function Contact() {
             }}
             viewport={{ once: true }}
             className="pt-16">
-              <h2 className="mb-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-black tracking-tight leading-none text-center">Feel free to get in touch</h2>
-              <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl md:w-7/12 m-auto 2xl:text-2xl">If you have any questions, suggestions, or simply want to share your experience with me, don’t hesitate. Reach out to me anytime. I'm here to listen and respond. Your feedback helps me grow and improve. So, feel free to get in touch!</p>
+              <h2 className="mb-4 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-black tracking-tight leading-none text-center">Let's make something great <span className="text-themeColor">together</span></h2>
+              <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl md:w-8/12 m-auto 2xl:text-2xl">If you have any questions, suggestions, or simply want to share your experience with me, don’t hesitate. Reach out to me anytime.</p>
           </motion.div>
           <motion.div
           initial={{ opacity: 0, y: 100 }}

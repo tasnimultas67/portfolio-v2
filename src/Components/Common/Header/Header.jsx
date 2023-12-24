@@ -1,7 +1,7 @@
 import { Fragment, useContext, useEffect, useState } from 'react';
 import './Header.css'
-import { Dialog, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Dialog, Listbox, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../../../../public/tasnimul-haque-logo.png'
 import { Link, NavLink} from 'react-router-dom';
 import TopBanner from '../TopBanner/TopBanner';
@@ -15,13 +15,28 @@ const navigation = [
     { name: 'Contact', href: '/contact' },
 ]
 
+
+const colors = [
+  { "name": "Electric Ultramarine", "colorCode":  "72 1 255", "hexCol": "#4801FF"},
+  { "name": "Neon Blue", "colorCode":  "17 0 154", "hexCol": "#11009E"},
+  { "name": "Chocolate", "colorCode":  "135 54 0", "hexCol": "#873600"},
+  { "name": "Lincoln Green", "colorCode":  "27 89 14", "hexCol": "#1B590E"},
+  { "name": "Violet", "colorCode":  "152 0 163", "hexCol": "#9800A3"},
+  { "name": "Blue-Violet", "colorCode":  "126 48 225", "hexCol": "#7E30E1"},
+  { "name": "Metallic Violet", "colorCode":  "91 8 136", "hexCol": "#5B0888"},
+]
+
 const Header = () => {
   const Tas = "https://i.ibb.co/sKQBwkc/Tasnimul-Haque.jpg"
-
   const {user, signOutUser} = useContext(AuthContext)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [navBg, setNavBg] = useState(false);
   const [isHidden, setIsHidden] = useState(false)
+  const [selectedColor, setSelectedColor] = useState(colors[0])
+  
+  document.documentElement.style.setProperty("--theme-color", `${selectedColor.colorCode}`)
+
+
 
 
     const changeNavBg = () => {
@@ -32,7 +47,7 @@ const Header = () => {
         window.addEventListener('scroll', changeNavBg);
         return () => {
         window.removeEventListener('scroll', changeNavBg);
-        }
+      }
     }, [])
   const handleClickHidden = () => {
     setIsHidden(!isHidden);
@@ -87,12 +102,52 @@ const Header = () => {
             ))}
             </div>
             
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end relative">
+          <div className="hidden lg:flex lg:justify-end relative gap-3">
             <a href='Tasnimul Haque Resume.pdf' className="flex items-center text-[0.7rem] 2xl:text-base relative leading-6 text-black uppercase bg-white px-5 2xl:px-8 2xl:py-2  py-1 group group-* w-fit rounded" download>
               Resume <span aria-hidden="true"><ArrowUpRightIcon className="h-5 w-5 2xl:h-6 2xl:w-6 relative text-black ml-1 group-hover:-mt-2 group-hover:-mr-2 group-hover:ml-3"/></span>
-              </a>
+                </a>
+                {/* Color Code Select */}
+
+                <Listbox
+                  as="div"
+                  className=" p-0.5 rounded-full flex items-center"
+                  value={selectedColor}
+                  onChange={setSelectedColor}>
+                  
+                  <Listbox.Button className=" flex items-center" title='Color Palette'><div className={`w-5 h-5 rounded-full outline outline-2 outline-offset-2 outline-white bg-themeColor`} ></div></Listbox.Button>
+                  
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-in duration-300"
+                      enterFrom="opacity-0 translate-y-1"
+                      enterTo="opacity-100 translate-y-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 translate-y-1"
+                    >
+                      <Listbox.Options className="absolute -left-20 top-10 z-10 mt-3 w-[230px] overflow-hidden rounded-xl bg-white shadow-2xl py-3 px-2">
+                        {colors.map((color) => (
+                          <Listbox.Option
+                            key={color.name}
+                            value={color}
+                            as={Fragment}>
+                            {({ active, selected }) => (
+                              <li
+                                className={`${
+                                  active ? 'bg-themeColor text-white' : 'bg-white text-black'
+                                } flex items-center justify-start gap-1 px-2 py-1 rounded-md cursor-pointer`}
+                              >
+                                {selected && <CheckIcon className="h-4 w-4" />}
+                                <div className="w-5 h-5 rounded-full" style={{backgroundColor: `${color.hexCol}`}}></div>{color.name}
+                              </li>
+                            )}
+                          </Listbox.Option>
+                        ))}
+                      </Listbox.Options>
+                      </Transition>
+                    </Listbox>
               {
-              user && <Menu as="div" className="relative ml-3">
+              user && <Menu as="div" className="relative">
                   <div>
                     <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-1.5" />
@@ -154,7 +209,8 @@ const Header = () => {
             </div>
 
             
-        </nav>
+          </nav>
+          {/* Mobile Menu---- */}
         <Dialog as="div" className="lg:hidden " open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-[1000] w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">

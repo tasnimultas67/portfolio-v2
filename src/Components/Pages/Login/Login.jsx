@@ -1,10 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const { signInUser} = useContext(AuthContext)
       const [error, setError] = useState()
-
+  const location = useLocation()
+  const navigate = useNavigate()
+  const from = location.state?.from?.pathname || "/";
 
 
   const handleLogin = event => {
@@ -15,7 +18,8 @@ export default function Login() {
         signInUser(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                form.reset()
+              form.reset()
+              navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)

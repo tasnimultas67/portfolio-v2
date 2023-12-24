@@ -8,13 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'themeColor': '#4801FF',
+        'themeColor': "rgb(var(--theme-color) / <alpha-value>)",
         'yellowAc': '#ffff00'
       }
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
   ],
 }

@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 
 const Portfolios = () => {
   const [portfolios, setPortfolios] = useState([]);
+  console.log(portfolios);
 
   useEffect(() => {
-    fetch("https://portfolio-backend-server-66tm.vercel.app")
+    fetch("https://portfolio-backend-server-66tm.vercel.app", {
+      headers: "GET",
+    })
       .then((res) => res.json())
       .then((data) => setPortfolios(data));
   }, []);

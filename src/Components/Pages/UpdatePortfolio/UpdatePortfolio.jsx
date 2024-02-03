@@ -47,7 +47,7 @@ const UpdatePortfolio = () => {
     };
 
     // Send data to the server
-    fetch(`https://portfolio-backend-server-66tm.vercel.app/${_id}`, {
+    fetch(`https://portfolio-backend-0ol2.onrender.com/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

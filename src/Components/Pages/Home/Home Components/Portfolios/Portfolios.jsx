@@ -8,7 +8,7 @@ const Portfolios = () => {
   console.log(portfolios);
 
   useEffect(() => {
-    fetch("https://portfolio-backend-server-66tm.vercel.app", {
+    fetch("https://portfolio-backend-0ol2.onrender.com", {
       headers: "GET",
     })
       .then((res) => res.json())

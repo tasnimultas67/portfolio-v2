@@ -18,7 +18,7 @@ export default function ManagePortfolio() {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://portfolio-backend-server-66tm.vercel.app/${_id}`, {
+        fetch(`https://portfolio-backend-0ol2.onrender.com/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

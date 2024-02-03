@@ -33,15 +33,13 @@ const router = createBrowserRouter([
       {
         path: "/portfolio",
         element: <Portfolio />,
-        loader: () => fetch("https://portfolio-backend-server-66tm.vercel.app"),
+        loader: () => fetch("https://portfolio-backend-0ol2.onrender.com"),
       },
       {
         path: "/portfolio/:id",
         element: <SinglePortfolio />,
         loader: ({ params }) =>
-          fetch(
-            `https://portfolio-backend-server-66tm.vercel.app/${params.id}`
-          ),
+          fetch(`https://portfolio-backend-0ol2.onrender.com/${params.id}`),
       },
       {
         path: "/contact",
@@ -67,7 +65,7 @@ const router = createBrowserRouter([
             <ManagePortfolio />
           </PrivateRoutes>
         ),
-        loader: () => fetch("https://portfolio-backend-server-66tm.vercel.app"),
+        loader: () => fetch("https://portfolio-backend-0ol2.onrender.com"),
       },
       {
         path: "/portfolio/update/:id",
@@ -77,9 +75,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://portfolio-backend-server-66tm.vercel.app/${params.id}`
-          ),
+          fetch(`https://portfolio-backend-0ol2.onrender.com/${params.id}`),
       },
     ],
   },

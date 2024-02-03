@@ -30,7 +30,7 @@ const AddPortfolio = () => {
     };
 
     // Send data to the server
-    fetch("https://portfolio-backend-server-66tm.vercel.app", {
+    fetch("https://portfolio-backend-0ol2.onrender.com", {
       method: "POST",
       headers: {
         "content-type": "application/json",
